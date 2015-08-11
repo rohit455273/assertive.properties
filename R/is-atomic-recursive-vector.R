@@ -37,8 +37,6 @@
 #'   recursive_types[1:2]
 #' )
 #' for(var in vector_types) assert_is_vector(var)
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_atomic <- function(x, .xname = get_name_in_parent(x))
 {
@@ -50,8 +48,6 @@ is_atomic <- function(x, .xname = get_name_in_parent(x))
 }
 
 #' @rdname is_atomic
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_recursive <- function(x, .xname = get_name_in_parent(x))
 {
@@ -63,8 +59,6 @@ is_recursive <- function(x, .xname = get_name_in_parent(x))
 }
 
 #' @rdname is_atomic
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_vector <- function(x, .xname = get_name_in_parent(x))
 {

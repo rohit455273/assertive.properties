@@ -12,8 +12,6 @@
 #' nothing but throw an error if \code{has_attributes} is not \code{TRUE}.
 #' @examples
 #' has_any_attributes(matrix(1:12, nrow = 3))
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_any_attributes <- function(x, .xname = get_name_in_parent(x))
 {
@@ -40,8 +38,6 @@ has_any_attributes <- function(x, .xname = get_name_in_parent(x))
 #' assert_has_any_attributes(x, c("names", "c"))
 #' #These examples should fail.
 #' assertive.base::dont_stop(assert_has_all_attributes(x, c("names", "c")))
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @importFrom assertive.base bapply
 #' @export
 has_attributes <- function(x, attrs, .xname = get_name_in_parent(x))

@@ -1,7 +1,6 @@
 #' @rdname has_attributes
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
+#' @include imports.R
 assert_has_all_attributes <- function(x, attrs)
 {                                       
   msg <- gettextf(
@@ -13,8 +12,6 @@ assert_has_all_attributes <- function(x, attrs)
 }
 
 #' @rdname has_attributes
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_any_attributes <- function(x, attrs)
 {                                       

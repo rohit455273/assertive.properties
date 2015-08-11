@@ -13,8 +13,6 @@
 #' @examples
 #' assert_has_rows(data.frame(x = 1:10))
 #' assert_has_cols(matrix())
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_cols <- function(x, .xname = get_name_in_parent(x))
 {
@@ -40,8 +38,6 @@ has_cols <- function(x, .xname = get_name_in_parent(x))
 #' \code{assert_has_dims} returns nothing but throws an error if
 #' \code{has_dims} is not \code{TRUE}.
 #' @seealso \code{\link[base]{dim}}, \code{\link{is_of_dimension}}.
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_dims <- function(x, .xname = get_name_in_parent(x))
 {
@@ -54,8 +50,6 @@ has_dims <- function(x, .xname = get_name_in_parent(x))
 }
 
 #' @rdname has_cols
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_rows <- function(x, .xname = get_name_in_parent(x))
 {

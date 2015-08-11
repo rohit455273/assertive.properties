@@ -1,6 +1,4 @@
 #' @rdname has_cols
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_cols <- function(x)
 {                                       
@@ -9,8 +7,6 @@ assert_has_cols <- function(x)
 }
 
 #' @rdname has_dims
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_dims <- function(x)
 {                                                                
@@ -19,8 +15,6 @@ assert_has_dims <- function(x)
 }
 
 #' @rdname has_cols
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_rows <- function(x)
 {                                                             

@@ -1,6 +1,4 @@
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @importFrom assertive.base use_first
 #' @export
 has_elements <- function(x, n, .xname = get_name_in_parent(x))
@@ -97,8 +95,6 @@ check_n <- function(n)
 #' # is_of_dimension tests the lengths of all dimensions.
 #' assert_is_of_dimension(d, c(5, 2))
 #' assert_is_of_dimension(l, NULL)
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_empty <- function(x, metric = c("length", "elements"), .xname = get_name_in_parent(x))
 {  
@@ -108,8 +104,6 @@ is_empty <- function(x, metric = c("length", "elements"), .xname = get_name_in_p
 
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_non_empty <- function(x, metric = c("length", "elements"), .xname = get_name_in_parent(x))
 {
@@ -122,8 +116,6 @@ is_non_empty <- function(x, metric = c("length", "elements"), .xname = get_name_
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_of_dimension <- function(x, n, .xname = get_name_in_parent(x))
 {
@@ -191,8 +183,6 @@ is_of_dimension <- function(x, n, .xname = get_name_in_parent(x))
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @importFrom assertive.base use_first
 #' @export
 is_of_length <- function(x, n, .xname = get_name_in_parent(x))
@@ -208,8 +198,6 @@ is_of_length <- function(x, n, .xname = get_name_in_parent(x))
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 is_scalar <- function(x, metric = c("length", "elements"), 
   .xname = get_name_in_parent(x))

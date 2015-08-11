@@ -1,6 +1,4 @@
 #' @rdname has_names
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_colnames <- function(x, .xname = get_name_in_parent(x))
 {
@@ -17,8 +15,6 @@ has_colnames <- function(x, .xname = get_name_in_parent(x))
 } 
 
 #' @rdname has_names
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_dimnames <- function(x, .xname = get_name_in_parent(x))
 {
@@ -56,8 +52,6 @@ has_dimnames <- function(x, .xname = get_name_in_parent(x))
 #' assert_has_rownames(dfr)
 #' assert_has_colnames(dfr)
 #' assert_has_dimnames(dfr)
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_names <- function(x, .xname = get_name_in_parent(x))
 {
@@ -74,8 +68,6 @@ has_names <- function(x, .xname = get_name_in_parent(x))
 } 
 
 #' @rdname has_names
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base false
 #' @export
 has_rownames <- function(x, .xname = get_name_in_parent(x))
 {

@@ -1,6 +1,4 @@
 #' @rdname is_atomic
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_atomic <- function(x)
 {                                                    
@@ -8,8 +6,6 @@ assert_is_atomic <- function(x)
 }
 
 #' @rdname is_atomic
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_recursive <- function(x)
 {                                                         
@@ -17,8 +13,6 @@ assert_is_recursive <- function(x)
 }
 
 #' @rdname is_atomic
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_vector <- function(x)
 {                                                    

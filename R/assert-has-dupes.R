@@ -1,6 +1,4 @@
 #' @rdname has_duplicates
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_duplicates <- function(x)
 {                                                                
@@ -9,8 +7,6 @@ assert_has_duplicates <- function(x)
 }
 
 #' @rdname has_duplicates
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_no_duplicates <- function(x)
 {                                                                

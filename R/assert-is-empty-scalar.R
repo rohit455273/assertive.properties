@@ -1,6 +1,4 @@
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_has_elements <- function(x, n)
 {                                                  
@@ -8,8 +6,6 @@ assert_has_elements <- function(x, n)
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_empty <- function(x, metric = c("length", "elements"))
 {                             
@@ -18,8 +14,6 @@ assert_is_empty <- function(x, metric = c("length", "elements"))
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_non_empty <- function(x, metric = c("length", "elements"))
 {                            
@@ -28,8 +22,6 @@ assert_is_non_empty <- function(x, metric = c("length", "elements"))
 }
 
 ##' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_of_dimension <- function(x, n)
 {                                                  
@@ -37,8 +29,6 @@ assert_is_of_dimension <- function(x, n)
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_of_length <- function(x, n)
 {                                                  
@@ -46,8 +36,6 @@ assert_is_of_length <- function(x, n)
 }
 
 #' @rdname is_empty
-#' @importFrom assertive.base get_name_in_parent
-#' @importFrom assertive.base assert_engine
 #' @export
 assert_is_scalar <- function(x, metric = c("length", "elements"))
 {                                        
