@@ -128,10 +128,13 @@ has_elements <- function(x, n, .xname = get_name_in_parent(x))
   {
     return(
       false(
-        "%s has %d %s, not %d.", 
+        ngettext(
+          n_elements_x, 
+          "%s has %d element, not %d.", 
+          "%s has %d elements, not %d."
+        ),
         .xname, 
-        n_elements_x, 
-        ngettext(n_elements_x, "element", "elements"),
+        n_elements_x,
         n
       )
     )
@@ -186,20 +189,13 @@ is_of_dimension <- function(x, n, .xname = get_name_in_parent(x))
     bad <- which(differences)
     return(
       false(
-        "%s %s of %s %s incorrect.", 
-        ngettext(length(bad), "Dimension", "Dimensions"), 
+        ngettext(
+          length(bad), 
+          "Dimension %s of %s is incorrect.", 
+          "Dimensions %s of %s are incorrect."
+        ), 
         toString(bad), 
-        .xname,
-        ngettext(length(bad), "is", "are")
-      )
-    )
-    return(
-      false(
-        "%s %s of %s %s incorrect.", 
-        ngettext(length(bad), "Dimension", "Dimensions"), 
-        toString(bad), 
-        .xname,
-        ngettext(length(bad), "is", "are")
+        .xname
       )
     )
   }
