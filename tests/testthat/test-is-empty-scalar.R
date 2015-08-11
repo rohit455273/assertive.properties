@@ -30,6 +30,18 @@ test_that("test.is_non_empty.null.returns_false", {
   expect_false(is_non_empty(NULL))
 })
 
+test_that("test.is_non_scalar.a_scalar.returns_false", {
+  expect_false(is_non_scalar(1))
+})
+
+test_that("test.is_non_scalar.a_vector.returns_true", {
+  expect_true(is_non_scalar(1:2))
+})
+
+test_that("test.is_non_scalar.empty.returns_true", {
+  expect_true(is_non_scalar(numeric()))
+}) 
+
 test_that("test.is_scalar.a_scalar.returns_true", {
   expect_true(is_scalar(1))
 })

@@ -1,34 +1,3 @@
-#' @rdname is_empty
-#' @importFrom assertive.base use_first
-#' @export
-has_elements <- function(x, n, .xname = get_name_in_parent(x))
-{
-  n <- use_first(n)
-  check_n(n)
-  n_elements_x <- n_elements(x)
-  if(n_elements_x != n)
-  {
-    return(
-      false(
-        "%s has %d %s, not %d.", 
-        .xname, 
-        n_elements_x, 
-        ngettext(n_elements_x, "element", "elements"),
-        n
-      )
-    )
-  }
-  TRUE
-}
-
-check_n <- function(n)
-{
-  if(n < 0 || n != round(n))
-  {
-    stop("n should be a non-negative integer vector.")
-  }
-}
-
 #' Is the input empty/scalar?
 #'
 #' Checks to see if the input has length zero/one.
@@ -110,7 +79,62 @@ is_non_empty <- function(x, metric = c("length", "elements"), .xname = get_name_
   metric <- get_metric(metric)
   if(metric(x, 0)) 
   {
-    return(false("%s has length 0.", .xname))
+    msg <- switch(
+      metric,
+      length = gettext("%s has length 0."),
+      elements = gettext("%s has 0 elements.")
+    )
+    return(false(msg, .xname))
+  }
+  TRUE
+}
+
+#' @rdname is_empty
+#' @export
+is_non_scalar <- function(x, metric = c("length", "elements"), .xname = get_name_in_parent(x))
+{
+  metric <- get_metric(metric)
+  if(metric(x, 1)) 
+  {
+    msg <- switch(
+      metric,
+      length = gettext("%s has length 1."),
+      elements = gettext("%s has 1 element.")
+    )
+    return(false(msg, .xname))
+  }
+  TRUE
+}
+
+#' @rdname is_empty
+#' @export
+is_scalar <- function(x, metric = c("length", "elements"), 
+                      .xname = get_name_in_parent(x))
+{
+  metric <- get_metric(metric)
+  metric(x, 1L, .xname)
+}     
+
+
+#' @rdname is_empty
+#' @importFrom assertive.base use_first
+#' @export
+has_elements <- function(x, n, .xname = get_name_in_parent(x))
+{
+  n <- use_first(n)
+  check_n(n)
+  n_elements_x <- n_elements(x)
+  if(n_elements_x != n)
+  {
+    return(
+      false(
+        "%s has %d %s, not %d.", 
+        .xname, 
+        n_elements_x, 
+        ngettext(n_elements_x, "element", "elements"),
+        n
+      )
+    )
   }
   TRUE
 }
@@ -197,14 +221,13 @@ is_of_length <- function(x, n, .xname = get_name_in_parent(x))
   TRUE
 }
 
-#' @rdname is_empty
-#' @export
-is_scalar <- function(x, metric = c("length", "elements"), 
-  .xname = get_name_in_parent(x))
+check_n <- function(n)
 {
-  metric <- get_metric(metric)
-  metric(x, 1L, .xname)
-}     
+  if(n < 0 || n != round(n))
+  {
+    stop("n should be a non-negative integer vector.")
+  }
+}
 
 get_metric <- function(metric = c("length", "elements"))
 {
