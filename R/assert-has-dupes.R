@@ -1,0 +1,19 @@
+#' @rdname has_duplicates
+#' @importFrom assertive.base get_name_in_parent
+#' @importFrom assertive.base assert_engine
+#' @export
+assert_has_duplicates <- function(x)
+{                                                                
+  msg <- gettextf("%s has no duplicates.", get_name_in_parent(x))
+  assert_engine(has_duplicates, x, msg = msg)
+}
+
+#' @rdname has_duplicates
+#' @importFrom assertive.base get_name_in_parent
+#' @importFrom assertive.base assert_engine
+#' @export
+assert_has_no_duplicates <- function(x)
+{                                                                
+  msg <- gettextf("%s has duplicates.", get_name_in_parent(x))
+  assert_engine(has_no_duplicates, x, msg = msg)
+}

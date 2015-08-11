@@ -1,0 +1,17 @@
+{
+    "contents" : "#' Does the input have any attributes?\n#'\n#' Checks to see if the input has any attributes.\n#'\n#' @param x Input to check.\n#' @param .xname Not intended to be used directly.\n#' @return \\code{has_any_attributes} returns \\code{TRUE} if \\code{attributes(x)}\n#' has length greater than zero. \\code{has_attributes} returns a logical vector\n#' that is \\code{TRUE} whenever the specified attribute is not \\code{NULL}.\n#' \n#' \\code{assert_has_all_attributes} and \\code{assert_has_all_attributes} return\n#' nothing but throw an error if \\code{has_attributes} is not \\code{TRUE}.\n#' @examples\n#' has_any_attributes(matrix(1:12, nrow = 3))\n#' @importFrom assertive.base get_name_in_parent\n#' @importFrom assertive.base false\n#' @export\nhas_any_attributes <- function(x, .xname = get_name_in_parent(x))\n{\n  if(!is_empty(attributes(x)))\n  {\n    return(false(\"%s has attributes.\", .xname))\n  }\n  TRUE\n}\n\n#' Does the input have the specified attributes?\n#'\n#' Checks to see if the input has the specifed attributes.\n#'\n#' @param x Input to check.\n#' @param attrs Desired attributes.\n#' @param .xname Not intended to be used directly.\n#' @return \\code{has_attributes} returns \\code{TRUE} where \\code{x} has\n#' the attributes specified in \\code{attrs}. \\code{assert_has_terms} returns \n#' nothing but throws an error if \\code{has_terms} is not \\code{TRUE}.\n#' @examples\n#' x <- structure(c(a = 1), b = 2)\n#' assert_has_all_attributes(x, c(\"names\", \"b\"))\n#' assert_has_any_attributes(x, c(\"names\", \"c\"))\n#' #These examples should fail.\n#' assertive.base::dont_stop(assert_has_all_attributes(x, c(\"names\", \"c\")))\n#' @importFrom assertive.base get_name_in_parent\n#' @importFrom assertive.base false\n#' @importFrom assertive.base bapply\n#' @export\nhas_attributes <- function(x, attrs, .xname = get_name_in_parent(x))\n{\n  if(is_empty(attrs)) return(logical())\n  bapply(\n    attrs,\n    function(at) is_not_null(attr(x, at))\n  )\n}\n",
+    "created" : 1439276569455.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3264549509",
+    "id" : "802B2E57",
+    "lastKnownWriteTime" : 1439277145,
+    "path" : "D:/workspace/assertive.properties/R/has-attributes.R",
+    "project_path" : "R/has-attributes.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
