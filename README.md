@@ -23,3 +23,35 @@ Then you can install the *assertive.properties* package using
 library(devtools)
 install_bitbucket("richierocks/assertive.properties")
 ```
+
+### Predicates
+
+`has_attributes` checks a variable for the presence of named attributes.  `has_any_attributes` checks for the presence of any attributes at all.
+
+`has_dims`, `has_rows`, and `has_cols` check for the dimensions, rows and columns respectively.
+
+`has_duplicates` and `has_no_duplicates` check wtherh or not a vector has duplicate elements.
+
+`has_names`, `has_dimnames`, `has_rownames`, and `has_colnames` check for various types of name.
+
+`is_atomic`, `is_recursive`, and `is_vector` check for these types of variables.
+
+`is_empty`, `is_non_empty`, `is_scalar`, and `is_non_scalar` check for objects of length 0 or 1 (or objects with 0/1 element).  
+
+`is_of_length`, `has_elements`, and `is_of_dimension` provide more general variable size checks.
+
+`is_null` and `is_not_null` check whether an object is `NULL` or not.
+
+### Assertions
+
+Predicates that return a vector have two corresponding assertions.  For example,
+`has_attributes` has `assert_has_all_attributes` and `assert_has_any_attributes`.
+
+Predicates returning a single logical value have one corresponding assertion.
+For example, `is_null` has `assert_is_null`.
+
+### Utilities
+
+`DIM` returns the dimension of an object, and works with vectors (like `NROW` and `NCOL`).
+
+`n_elements` returns the number of elements in an object.
