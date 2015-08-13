@@ -42,6 +42,8 @@ install_bitbucket("richierocks/assertive.properties")
 
 `is_null` and `is_not_null` check whether an object is `NULL` or not.
 
+`is_unsorted` checks for unsorted vectors.
+
 ### Assertions
 
 Predicates that return a vector have two corresponding assertions.  For example,
