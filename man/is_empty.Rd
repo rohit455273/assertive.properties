@@ -4,12 +4,14 @@
 \alias{assert_has_elements}
 \alias{assert_is_empty}
 \alias{assert_is_non_empty}
+\alias{assert_is_non_scalar}
 \alias{assert_is_of_dimension}
 \alias{assert_is_of_length}
 \alias{assert_is_scalar}
 \alias{has_elements}
 \alias{is_empty}
 \alias{is_non_empty}
+\alias{is_non_scalar}
 \alias{is_of_dimension}
 \alias{is_of_length}
 \alias{is_scalar}
@@ -21,13 +23,13 @@ assert_is_empty(x, metric = c("length", "elements"))
 
 assert_is_non_empty(x, metric = c("length", "elements"))
 
+assert_is_non_scalar(x, metric = c("length", "elements"))
+
 assert_is_of_dimension(x, n)
 
 assert_is_of_length(x, n)
 
 assert_is_scalar(x, metric = c("length", "elements"))
-
-has_elements(x, n, .xname = get_name_in_parent(x))
 
 is_empty(x, metric = c("length", "elements"),
   .xname = get_name_in_parent(x))
@@ -35,12 +37,17 @@ is_empty(x, metric = c("length", "elements"),
 is_non_empty(x, metric = c("length", "elements"),
   .xname = get_name_in_parent(x))
 
-is_of_dimension(x, n, .xname = get_name_in_parent(x))
-
-is_of_length(x, n, .xname = get_name_in_parent(x))
+is_non_scalar(x, metric = c("length", "elements"),
+  .xname = get_name_in_parent(x))
 
 is_scalar(x, metric = c("length", "elements"),
   .xname = get_name_in_parent(x))
+
+has_elements(x, n, .xname = get_name_in_parent(x))
+
+is_of_dimension(x, n, .xname = get_name_in_parent(x))
+
+is_of_length(x, n, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}

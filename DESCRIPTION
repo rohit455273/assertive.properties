@@ -37,6 +37,7 @@ Collate:
     'assert-is-atomic-recursive-vector.R'
     'assert-is-empty-scalar.R'
     'assert-is-null.R'
+    'assert-is-unsorted.R'
     'has-attributes.R'
     'has-dims.R'
     'has-dupes.R'
@@ -44,4 +45,5 @@ Collate:
     'is-atomic-recursive-vector.R'
     'is-empty-scalar.R'
     'is-null.R'
+    'is-unsorted.R'
     'utils.R'
