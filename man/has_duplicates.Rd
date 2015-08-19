@@ -29,6 +29,11 @@ throws an error if \code{has_duplicates} is not \code{TRUE}.
 \description{
 Checks to see if the input has duplicates.
 }
+\examples{
+x <- sample(10, 100, replace = TRUE)
+assert_has_duplicates(x)
+has_no_duplicates(x)
+}
 \seealso{
 \code{\link{anyDuplicated}}.
 }
