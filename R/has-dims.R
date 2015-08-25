@@ -4,6 +4,8 @@
 #'
 #' @param x Input to check.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{has_rows} and \code{has_cols} return \code{TRUE} if 
 #' \code{nrow} and \code{ncol} respectively return a value that is 
 #' non-null and positive.  The \code{assert_*} functions return nothing 
@@ -34,6 +36,8 @@ has_cols <- function(x, .xname = get_name_in_parent(x))
 #'
 #' @param x Input to check.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{has_dims} returns\code{TRUE} if \code{dim} is non-null.
 #' \code{assert_has_dims} returns nothing but throws an error if
 #' \code{has_dims} is not \code{TRUE}.

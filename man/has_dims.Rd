@@ -5,12 +5,15 @@
 \alias{has_dims}
 \title{Does the input have dimensions?}
 \usage{
-assert_has_dims(x)
+assert_has_dims(x, severity = getOption("assertive.severity", "stop"))
 
 has_dims(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }

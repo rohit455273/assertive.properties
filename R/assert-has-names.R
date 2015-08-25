@@ -1,31 +1,51 @@
 #' @rdname has_names
 #' @export
-assert_has_colnames <- function(x)
+assert_has_colnames <- function(x, 
+  severity = getOption("assertive.severity", "stop"))
 {                                       
-  msg <- gettextf("%s has no column names.", get_name_in_parent(x))
-  assert_engine(has_colnames, x, msg = msg)
+  assert_engine(
+    has_colnames, 
+    x, 
+    .xname = get_name_in_parent(x),
+    severity = severity
+  )
 }
 
 #' @rdname has_names
 #' @export
-assert_has_dimnames <- function(x)
+assert_has_dimnames <- function(x, 
+  severity = getOption("assertive.severity", "stop"))
 {                                       
-  msg <- gettextf("%s has no dimension names.", get_name_in_parent(x))
-  assert_engine(has_dimnames, x, msg = msg)
+  assert_engine(
+    has_dimnames, 
+    x, 
+    .xname = get_name_in_parent(x),
+    severity = severity
+  )
 }
 
 #' @rdname has_names
 #' @export
-assert_has_names <- function(x)
-{                                                             
-  msg <- gettextf("%s has no names.", get_name_in_parent(x))
-  assert_engine(has_names, x, msg = msg)
+assert_has_names <- function(x, 
+  severity = getOption("assertive.severity", "stop"))
+{                                                            
+  assert_engine(
+    has_names, 
+    x, 
+    .xname = get_name_in_parent(x),
+    severity = severity
+  )
 }
 
 #' @rdname has_names
 #' @export
-assert_has_rownames <- function(x)
+assert_has_rownames <- function(x, 
+  severity = getOption("assertive.severity", "stop"))
 {                                                             
-  msg <- gettextf("%s has no row names.", get_name_in_parent(x))
-  assert_engine(has_rownames, x, msg = msg)
+  assert_engine(
+    has_rownames, 
+    x, 
+    .xname = get_name_in_parent(x),
+    severity = severity
+  )
 }

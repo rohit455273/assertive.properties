@@ -7,9 +7,9 @@
 \alias{has_rows}
 \title{Does the input have rows/columns?}
 \usage{
-assert_has_cols(x)
+assert_has_cols(x, severity = getOption("assertive.severity", "stop"))
 
-assert_has_rows(x)
+assert_has_rows(x, severity = getOption("assertive.severity", "stop"))
 
 has_cols(x, .xname = get_name_in_parent(x))
 
@@ -17,6 +17,9 @@ has_rows(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }

@@ -4,6 +4,8 @@
 #'
 #' @param x Input to check.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{is_atomic}, \code{is_recursive} and \code{is_vector} wrap 
 #' \code{is.atomic}, \code{is.recursive} and \code{is.vector} respectively,
 #' providing more information on failure.  The \code{assert_*} functions

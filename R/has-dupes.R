@@ -4,6 +4,8 @@
 #'
 #' @param x Input to check.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{has_duplicates} returns \code{TRUE} if\code{anyDuplicated} 
 #' is \code{TRUE}.  \code{assert_has_duplicates} returns nothing but 
 #' throws an error if \code{has_duplicates} is not \code{TRUE}. 
@@ -29,11 +31,16 @@ has_no_duplicates <- function(x, .xname = get_name_in_parent(x))
 {
   if(anyDuplicated(x)) 
   {
+    dupe_indicies <- which(duplicated(x))
     return(
       false(
-        gettext("%s has duplicates at positions %s."), 
+        ngettext(
+          length(dupe_indicies),
+          "%s has a duplicate at position %s.",
+          "%s has duplicates at positions %s."
+        ), 
         .xname, 
-        toString(which(duplicated(x)), width = 100)
+        toString(dupe_indicies, width = 100)
       )
     )
   }

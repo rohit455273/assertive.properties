@@ -17,19 +17,24 @@
 \alias{is_scalar}
 \title{Is the input empty/scalar?}
 \usage{
-assert_has_elements(x, n)
+assert_has_elements(x, n, severity = getOption("assertive.severity", "stop"))
 
-assert_is_empty(x, metric = c("length", "elements"))
+assert_is_empty(x, metric = c("length", "elements"),
+  severity = getOption("assertive.severity", "stop"))
 
-assert_is_non_empty(x, metric = c("length", "elements"))
+assert_is_non_empty(x, metric = c("length", "elements"),
+  severity = getOption("assertive.severity", "stop"))
 
-assert_is_non_scalar(x, metric = c("length", "elements"))
+assert_is_non_scalar(x, metric = c("length", "elements"),
+  severity = getOption("assertive.severity", "stop"))
 
-assert_is_of_dimension(x, n)
+assert_is_of_dimension(x, n, severity = getOption("assertive.severity",
+  "stop"))
 
-assert_is_of_length(x, n)
+assert_is_of_length(x, n, severity = getOption("assertive.severity", "stop"))
 
-assert_is_scalar(x, metric = c("length", "elements"))
+assert_is_scalar(x, metric = c("length", "elements"),
+  severity = getOption("assertive.severity", "stop"))
 
 is_empty(x, metric = c("length", "elements"),
   .xname = get_name_in_parent(x))
@@ -54,6 +59,9 @@ is_of_length(x, n, .xname = get_name_in_parent(x))
 
 \item{n}{Non-negative integer(s) of the expected length/number of elements/
 lengths of dimensions.  See note.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{metric}{A string. Should be length or the number of elements be used to
 determine if the object is empty/non-empty/scalar?}

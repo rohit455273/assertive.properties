@@ -11,13 +11,13 @@
 \alias{has_rownames}
 \title{Does the input have names?}
 \usage{
-assert_has_colnames(x)
+assert_has_colnames(x, severity = getOption("assertive.severity", "stop"))
 
-assert_has_dimnames(x)
+assert_has_dimnames(x, severity = getOption("assertive.severity", "stop"))
 
-assert_has_names(x)
+assert_has_names(x, severity = getOption("assertive.severity", "stop"))
 
-assert_has_rownames(x)
+assert_has_rownames(x, severity = getOption("assertive.severity", "stop"))
 
 has_colnames(x, .xname = get_name_in_parent(x))
 
@@ -29,6 +29,9 @@ has_rownames(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }

@@ -29,6 +29,8 @@ has_any_attributes <- function(x, .xname = get_name_in_parent(x))
 #' @param x Input to check.
 #' @param attrs Desired attributes.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{has_attributes} returns \code{TRUE} where \code{x} has
 #' the attributes specified in \code{attrs}. \code{assert_has_terms} returns 
 #' nothing but throws an error if \code{has_terms} is not \code{TRUE}.

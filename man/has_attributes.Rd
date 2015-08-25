@@ -6,9 +6,11 @@
 \alias{has_attributes}
 \title{Does the input have the specified attributes?}
 \usage{
-assert_has_all_attributes(x, attrs)
+assert_has_all_attributes(x, attrs, severity = getOption("assertive.severity",
+  "stop"))
 
-assert_has_any_attributes(x, attrs)
+assert_has_any_attributes(x, attrs, severity = getOption("assertive.severity",
+  "stop"))
 
 has_attributes(x, attrs, .xname = get_name_in_parent(x))
 }
@@ -16,6 +18,9 @@ has_attributes(x, attrs, .xname = get_name_in_parent(x))
 \item{x}{Input to check.}
 
 \item{attrs}{Desired attributes.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }

@@ -7,9 +7,10 @@
 \alias{has_no_duplicates}
 \title{Does the input have duplicates?}
 \usage{
-assert_has_duplicates(x)
+assert_has_duplicates(x, severity = getOption("assertive.severity", "stop"))
 
-assert_has_no_duplicates(x)
+assert_has_no_duplicates(x, severity = getOption("assertive.severity",
+  "stop"))
 
 has_duplicates(x, .xname = get_name_in_parent(x))
 
@@ -17,6 +18,9 @@ has_no_duplicates(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }

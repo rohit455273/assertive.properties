@@ -9,11 +9,11 @@
 \alias{is_vector}
 \title{Is the input atomic/recursive/vector?}
 \usage{
-assert_is_atomic(x)
+assert_is_atomic(x, severity = getOption("assertive.severity", "stop"))
 
-assert_is_recursive(x)
+assert_is_recursive(x, severity = getOption("assertive.severity", "stop"))
 
-assert_is_vector(x)
+assert_is_vector(x, severity = getOption("assertive.severity", "stop"))
 
 is_atomic(x, .xname = get_name_in_parent(x))
 
@@ -23,6 +23,9 @@ is_vector(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }

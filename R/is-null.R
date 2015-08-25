@@ -15,6 +15,8 @@ is_not_null <- function(x, .xname = get_name_in_parent(x))
 #'
 #' @param x Input to check.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{is_null} wraps \code{is.null}, providing more 
 #' information on failure. \code{is_not_null} returns \code{TRUE} in
 #' the opposite case.  The \code{assert_*} functions return nothing but

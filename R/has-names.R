@@ -36,6 +36,8 @@ has_dimnames <- function(x, .xname = get_name_in_parent(x))
 #'
 #' @param x Input to check.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{has_names} returns \code{TRUE} if \code{names} is 
 #' non-null. 
 #' \code{has_rownames}, \code{has_colnames} and \code{has_dimnames} work

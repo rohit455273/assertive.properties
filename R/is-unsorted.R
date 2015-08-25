@@ -6,6 +6,8 @@
 #' @param na.rm If \code{TRUE}, remove \code{NA}s before checking.
 #' @param strictly If \code{TRUE}, equal values count as unsorted.
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{is_unsorted} reimplements \code{is.unsorted}, providing
 #' more information on failure.  \code{assert_is_unsorted} returns nothing 
 #' but throws an error if \code{is_unsorted} returns \code{FALSE}.
@@ -20,8 +22,9 @@
 #' assert_is_unsorted(c(1, 3, 2))
 #' assert_is_unsorted(c(1, 1, 2), strictly = TRUE)
 #' #These tests should fail.
-#' dont_stop(assert_is_unsorted(c(1, 1, 2)))
-#' dont_stop(assert_is_unsorted(c(2, 1, 0)))
+#' assertive.base::dont_stop(assert_is_unsorted(c(1, 1, 2)))
+#' assertive.base::dont_stop(assert_is_unsorted(c(2, 1, 0)))
+#' @importFrom assertive.base na
 #' @export
 is_unsorted <- function(x, na.rm = FALSE, strictly = FALSE, 
                         .xname = get_name_in_parent(x))

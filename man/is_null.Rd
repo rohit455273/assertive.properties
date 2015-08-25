@@ -7,9 +7,9 @@
 \alias{is_null}
 \title{Is the input (not) null?}
 \usage{
-assert_is_not_null(x)
+assert_is_not_null(x, severity = getOption("assertive.severity", "stop"))
 
-assert_is_null(x)
+assert_is_null(x, severity = getOption("assertive.severity", "stop"))
 
 is_not_null(x, .xname = get_name_in_parent(x))
 
@@ -17,6 +17,9 @@ is_null(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
+
+\item{severity}{How severe should the consequences of the assertion be?
+Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.}
 
 \item{.xname}{Not intended to be used directly.}
 }
