@@ -8,6 +8,8 @@
 #' @param metric A string. Should be length or the number of elements be used to
 #' determine if the object is empty/non-empty/scalar?
 #' @param .xname Not intended to be used directly.
+#' @param severity How severe should the consequences of the assertion be?  
+#' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{is_empty} returns \code{TRUE} if the input has length 
 #' zero.  \code{is_scalar} returns \code{TRUE} if the input has length 
 #' one.  The \code{assert_*} functions return nothing but throw an
@@ -67,8 +69,9 @@
 #' @export
 is_empty <- function(x, metric = c("length", "elements"), .xname = get_name_in_parent(x))
 {  
-  metric <- get_metric(metric)
-  metric(x, 0L, .xname)
+  metric <- match.arg(metric)
+  metric_fn <- get_metric(metric)
+  metric_fn(x, 0L, .xname)
 }
 
 
@@ -76,8 +79,9 @@ is_empty <- function(x, metric = c("length", "elements"), .xname = get_name_in_p
 #' @export
 is_non_empty <- function(x, metric = c("length", "elements"), .xname = get_name_in_parent(x))
 {
-  metric <- get_metric(metric)
-  if(metric(x, 0)) 
+  metric <- match.arg(metric)
+  metric_fn <- get_metric(metric)
+  if(metric_fn(x, 0)) 
   {
     msg <- switch(
       metric,
@@ -93,8 +97,9 @@ is_non_empty <- function(x, metric = c("length", "elements"), .xname = get_name_
 #' @export
 is_non_scalar <- function(x, metric = c("length", "elements"), .xname = get_name_in_parent(x))
 {
-  metric <- get_metric(metric)
-  if(metric(x, 1)) 
+  metric <- match.arg(metric)
+  metric_fn <- get_metric(metric)
+  if(metric_fn(x, 1)) 
   {
     msg <- switch(
       metric,
@@ -111,8 +116,9 @@ is_non_scalar <- function(x, metric = c("length", "elements"), .xname = get_name
 is_scalar <- function(x, metric = c("length", "elements"), 
                       .xname = get_name_in_parent(x))
 {
-  metric <- get_metric(metric)
-  metric(x, 1L, .xname)
+  metric <- match.arg(metric)
+  metric_fn <- get_metric(metric)
+  metric_fn(x, 1L, .xname)
 }     
 
 
@@ -225,11 +231,12 @@ check_n <- function(n)
   }
 }
 
-get_metric <- function(metric = c("length", "elements"))
+get_metric <- function(metric)
 {
   switch(
-    match.arg(force(metric)[1], eval(formals(sys.function())$metric)),
+    metric,
     length   = is_of_length,
-    elements = has_elements
+    elements = has_elements,
+    stop("Bug in assertive; the metric", metric, "is not valid.")
   )
 }
