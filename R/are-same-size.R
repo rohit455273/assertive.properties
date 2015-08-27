@@ -22,7 +22,7 @@
 #' @examples
 #' are_same_length(runif(5), list(1, 2:3, 4:6, 7:10, 11:15))
 #' assertive.base::dont_stop(
-#'   assert_all_are_same_length(runif(5), list(1, 2:3, 4:6, 7:10, 11:15))
+#'   assert_are_same_length(runif(5), list(1, 2:3, 4:6, 7:10, 11:15))
 #' )
 #' have_same_dims(
 #'   matrix(1:12, nrow = 4), 
