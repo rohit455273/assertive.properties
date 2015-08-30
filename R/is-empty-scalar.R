@@ -237,6 +237,6 @@ get_metric <- function(metric)
     metric,
     length   = is_of_length,
     elements = has_elements,
-    stop("Bug in assertive; the metric", metric, "is not valid.")
+    stop("Bug in assertive; the metric", metric, "is not valid.", domain = NA)
   )
 }
