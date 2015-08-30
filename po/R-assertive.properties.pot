@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: assertive.properties 0.0-1\n"
-"POT-Creation-Date: 2015-08-25 10:13\n"
+"POT-Creation-Date: 2015-08-30 09:04\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9,6 +9,12 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+
+msgid "%s has length %d but %s has length %d."
+msgstr ""
+
+msgid "%s has dim %s but %s has dim %s."
+msgstr ""
 
 msgid "%s does not have all the attributes %s."
 msgstr ""
@@ -32,12 +38,6 @@ msgid "%s has 1 element."
 msgstr ""
 
 msgid "n should be a non-negative integer vector."
-msgstr ""
-
-msgid "Bug in assertive; the metric"
-msgstr ""
-
-msgid "is not valid."
 msgstr ""
 
 msgid        "%s has a duplicate at position %s."
