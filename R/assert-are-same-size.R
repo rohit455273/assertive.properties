@@ -62,7 +62,7 @@ assert_any_are_same_length_legacy <- function(..., l = list())
   ok <- are_same_length_legacy(..., l = l)
   if(!any(ok))
   {
-        handler_type <- match.arg(
+    handler_type <- match.arg(
       getOption("assertive.severity"), 
       c("stop", "warning", "message", "none")
     )
