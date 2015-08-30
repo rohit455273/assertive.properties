@@ -43,6 +43,8 @@ install_bitbucket("richierocks/assertive.properties")
 
 `is_of_length`, `has_elements`, and `is_of_dimension` provide more general variable size checks.
 
+`are_same_length` and `have_same_dims` check for two variables having the same length/dimensions.
+
 `is_null` and `is_not_null` check whether an object is `NULL` or not.
 
 `is_unsorted` checks for unsorted vectors.
