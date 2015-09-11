@@ -11,13 +11,36 @@
 #' \code{assert_has_all_attributes} and \code{assert_has_all_attributes} return
 #' nothing but throw an error if \code{has_attributes} is not \code{TRUE}.
 #' @examples
-#' has_any_attributes(matrix(1:12, nrow = 3))
+#' has_any_attributes(matrix())
+#' has_no_attributes(data.frame())
 #' @export
 has_any_attributes <- function(x, .xname = get_name_in_parent(x))
 {
-  if(!is_empty(attributes(x)))
+  if(is_empty(attributes(x)))
   {
-    return(false("%s has attributes.", .xname))
+    return(false("%s has no attributes.", .xname))
+  }
+  TRUE
+}
+
+#' @rdname has_any_attributes
+#' @export
+has_no_attributes <- function(x, .xname = get_name_in_parent(x))
+{
+  attr_names_x <- names(attributes(x))
+  if(!is_empty(attr_names_x))
+  {
+    return(
+      false(
+        ngettext(
+          length(attr_names_x),
+          "%s has the attribute %s.",
+          "%s has the attributes %s."
+        ), 
+        .xname, 
+        toString(attr_names_x)
+      )
+    )
   }
   TRUE
 }
