@@ -33,7 +33,7 @@ install_bitbucket("richierocks/assertive.properties")
 
 `has_dims`, `has_rows`, and `has_cols` check for the dimensions, rows and columns respectively.
 
-`has_duplicates` and `has_no_duplicates` check wtherh or not a vector has duplicate elements.
+`has_duplicates` and `has_no_duplicates` check whether or not a vector has duplicate elements.
 
 `has_names`, `has_dimnames`, `has_rownames`, and `has_colnames` check for various types of name.
 
