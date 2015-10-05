@@ -2,7 +2,7 @@ Package: assertive.properties
 Type: Package
 Title: Assertions to Check Properties of Variables
 Version: 0.0-1
-Date: 2015-08-11
+Date: 2015-10-05
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
