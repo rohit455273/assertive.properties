@@ -29,11 +29,11 @@ install_bitbucket("richierocks/assertive.properties")
 
 ### Predicates
 
-`has_attributes` checks a variable for the presence of named attributes.  `has_any_attributes` checks for the presence of any attributes at all.
+`has_attributes` checks a variable for the presence of named attributes.  `has_any_attributes` and `has_no_attributes` check for the presence or absence of any attributes at all.
 
 `has_dims`, `has_rows`, and `has_cols` check for the dimensions, rows and columns respectively.
 
-`has_duplicates` and `has_no_duplicates` check wtherh or not a vector has duplicate elements.
+`has_duplicates` and `has_no_duplicates` check whether or not a vector has duplicate elements.
 
 `has_names`, `has_dimnames`, `has_rownames`, and `has_colnames` check for various types of name.
 

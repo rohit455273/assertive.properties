@@ -2,9 +2,12 @@
 % Please edit documentation in R/has-attributes.R
 \name{has_any_attributes}
 \alias{has_any_attributes}
+\alias{has_no_attributes}
 \title{Does the input have any attributes?}
 \usage{
 has_any_attributes(x, .xname = get_name_in_parent(x))
+
+has_no_attributes(x, .xname = get_name_in_parent(x))
 }
 \arguments{
 \item{x}{Input to check.}
@@ -23,6 +26,7 @@ nothing but throw an error if \code{has_attributes} is not \code{TRUE}.
 Checks to see if the input has any attributes.
 }
 \examples{
-has_any_attributes(matrix(1:12, nrow = 3))
+has_any_attributes(matrix())
+has_no_attributes(data.frame())
 }
 
