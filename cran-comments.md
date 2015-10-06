@@ -11,15 +11,10 @@ This package extracts content from assertive 0.3-0 into its own package.
 
 There were no ERRORs or WARNINGs.
 
-Building under R < 3.3.0, I see the NOTE
-
-* checking top-level files ... NOTE
-Non-standard file/directory found at top level:
-  'cran-comments.md'
-
-This file contains this information.
+This will not build until assertive.base 0.0-2 (uploaded earlier) has 
+successfully made it on CRAN.
 
 ## Downstream dependencies
 
-A new version of the downstream assertive package will be uploaded once 
-assertive.base is successfully on CRAN.
+A new version of the downstream assertive package will be uploaded once the
+other assertive.* packages are successfully on CRAN.
