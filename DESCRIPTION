@@ -49,3 +49,4 @@ Collate:
     'is-null.R'
     'is-unsorted.R'
     'utils.R'
+RoxygenNote: 5.0.1
