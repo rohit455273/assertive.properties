@@ -19,8 +19,7 @@ Imports:
     assertive.base (>= 0.0-3),
     methods
 Suggests:
-    testthat,
-    devtools
+    testthat
 License: GPL (>= 3)
 LazyLoad: yes
 LazyData: yes
