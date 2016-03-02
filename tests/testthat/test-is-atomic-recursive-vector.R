@@ -49,15 +49,15 @@ test_that("test.is_nested.list_of_lists.returns_true", {
 
 
 test_that("test.is_non_nested.atomic.returns_true", {
-  expect_true(is_nested(1:5))
+  expect_true(is_non_nested(1:5))
 })
 
 test_that("test.is_non_nested.list_of_vectors.returns_true", {
-  expect_true(is_nested(list(1:5)))
+  expect_true(is_non_nested(list(1:5)))
 })
 
 test_that("test.is_non_nested.list_of_lists.returns_false", {
-  expect_false(is_nested(list(list(1:5))))
+  expect_false(is_non_nested(list(list(1:5))))
 })
 
 
