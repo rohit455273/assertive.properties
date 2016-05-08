@@ -1,8 +1,8 @@
 Package: assertive.properties
 Type: Package
 Title: Assertions to Check Properties of Variables
-Version: 0.0-2
-Date: 2016-03-02
+Version: 0.0-3
+Date: 2016-05-08
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
@@ -40,6 +40,7 @@ Collate:
     'assert-has-slot.R'
     'assert-is-atomic-recursive-vector.R'
     'assert-is-empty-scalar.R'
+    'assert-is-monotonic.R'
     'assert-is-null.R'
     'assert-is-unsorted.R'
     'has-attributes.R'
@@ -49,6 +50,7 @@ Collate:
     'has-slot.R'
     'is-atomic-recursive-vector.R'
     'is-empty-scalar.R'
+    'is-monotonic.R'
     'is-null.R'
     'is-unsorted.R'
     'utils.R'
