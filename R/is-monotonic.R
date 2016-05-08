@@ -14,6 +14,9 @@
 #' is_monotonic_decreasing(x)
 #' is_monotonic_decreasing(x, TRUE)
 #' 
+#' # Also works with, e.g., dates & times
+#' is_monotonic_increasing(Sys.time() + x)
+#' 
 #' # These checks should fail
 #' assertive.base::dont_stop({
 #'   assert_is_monotonic_increasing(x)
