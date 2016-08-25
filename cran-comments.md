@@ -1,6 +1,6 @@
 ## Release Summary
 
-This release contains 3 new predicate functions and their corresponding assertions, some backwards compatibility fixes, and a few more tests.
+This release contains functions for checking for monotonic sequences and their corresponding assertions.
 
 ## Test Environments
 
