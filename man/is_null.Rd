@@ -34,9 +34,11 @@ throw an error if the corresponding \code{is_*} function returns
 Checks to see if the input is (not) null.
 }
 \examples{
-# Predicate for NULL. Vectors of length zero are not NULL!
+# Predicate for NULL. 
 is_null(NULL)
 is_null(c())
+
+# Atomic vectors of length zero are not NULL!
 is_null(numeric())
 
 # The opposite check

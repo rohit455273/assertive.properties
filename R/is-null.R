@@ -24,9 +24,11 @@ is_not_null <- function(x, .xname = get_name_in_parent(x))
 #' \code{FALSE}.
 #' @seealso \code{\link[base]{is.null}}.
 #' @examples
-#' # Predicate for NULL. Vectors of length zero are not NULL!
+#' # Predicate for NULL. 
 #' is_null(NULL)
 #' is_null(c())
+#' 
+#' # Atomic vectors of length zero are not NULL!
 #' is_null(numeric())
 #' 
 #' # The opposite check
@@ -43,7 +45,7 @@ is_null <- function(x, .xname = get_name_in_parent(x))
 {
   if(!is.null(x))
   {
-    return(false("%s is not NULL.", .xname))
+    return(false("%s is not NULL; its value is %s.", .xname, deparse(x)))
   }
   TRUE
 }
