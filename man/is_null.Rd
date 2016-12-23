@@ -40,6 +40,8 @@ is_null(c())
 
 # Atomic vectors of length zero are not NULL!
 is_null(numeric())
+# ... and neither is NA
+is_null(NA)
 
 # The opposite check
 is_not_null(NULL)
@@ -50,6 +52,9 @@ is_not_null(numeric())
 assert_is_null(NULL)
 assert_is_null(c())
 assert_is_not_null(NA)
+
+# This should fail
+assertive.base::dont_stop(assert_is_null(NaN))
 }
 \seealso{
 \code{\link[base]{is.null}}.

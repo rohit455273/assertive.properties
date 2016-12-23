@@ -30,6 +30,8 @@ is_not_null <- function(x, .xname = get_name_in_parent(x))
 #' 
 #' # Atomic vectors of length zero are not NULL!
 #' is_null(numeric())
+#' # ... and neither is NA
+#' is_null(NA)
 #' 
 #' # The opposite check
 #' is_not_null(NULL)
@@ -40,12 +42,16 @@ is_not_null <- function(x, .xname = get_name_in_parent(x))
 #' assert_is_null(NULL)
 #' assert_is_null(c())
 #' assert_is_not_null(NA)
+#' 
+#' # This should fail
+#' assertive.base::dont_stop(assert_is_null(NaN))
+#' @importFrom assertive.base safe_deparse
 #' @export
 is_null <- function(x, .xname = get_name_in_parent(x))
 {
   if(!is.null(x))
   {
-    return(false("%s is not NULL; its value is %s.", .xname, deparse(x)))
+    return(false("%s is not NULL; its value is %s.", .xname, safe_deparse(x)))
   }
   TRUE
 }
