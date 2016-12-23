@@ -4,7 +4,7 @@ This release contains functions for checking for monotonic sequences and their c
 
 ## Test Environments
 
-* Local Windows 7 & 10, R-devel 
+* Local macOS Sierra, R-devel 
 * Semaphore CI + Ubuntu 14.04, R-devel and R-release
 * AppVeyor + Windows Server 2012, R-devel
 
