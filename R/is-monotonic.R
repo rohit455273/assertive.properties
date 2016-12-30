@@ -27,6 +27,10 @@
 #' @export
 is_monotonic_increasing <- function(x, strictly = FALSE, .xname = get_name_in_parent(x))
 {
+  if(anyNA(x))
+  {
+    return(na("There are missing values, so monotonicity cannot be determined."))
+  }
   bad_diff_x <- which(
     if(strictly)
     {
@@ -62,6 +66,10 @@ is_monotonic_increasing <- function(x, strictly = FALSE, .xname = get_name_in_pa
 #' @export
 is_monotonic_decreasing <- function(x, strictly = FALSE, .xname = get_name_in_parent(x))
 {
+  if(anyNA(x))
+  {
+    return(na("There are missing values, so monotonicity cannot be determined."))
+  }
   bad_diff_x <- which(
     if(strictly)
     {
