@@ -1,6 +1,6 @@
 ## Release Summary
 
-This release contains functions for checking for monotonic sequences and their corresponding assertions.
+This is a maintenance release with improved documentation and examples.
 
 ## Test Environments
 
@@ -14,5 +14,4 @@ There were no ERRORs or WARNINGs.
 
 ## Downstream dependencies
 
-A new version of the downstream assertive package will be uploaded once the
-other assertive.* packages are successfully on CRAN.
+A new version of the downstream assertive.types and assertive packages will be uploaded once the other assertive.* packages are successfully on CRAN.
