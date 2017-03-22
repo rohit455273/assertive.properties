@@ -2,6 +2,7 @@
 [![Is the package on CRAN?](http://www.r-pkg.org/badges/version/assertive.properties)](http://www.r-pkg.org/pkg/assertive.properties)
 [![SemaphoreCI Build Status](https://semaphoreci.com/api/v1/projects/a6502e87-9ee4-42cb-8ab3-cd9ecce2ca5f/635146/badge.svg)](https://semaphoreci.com/richierocks/assertive-properties)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/jd2j588xgmjtrp3j?svg=true)](https://ci.appveyor.com/project/richierocks/assertive-properties)
+[![Research software impact](http://depsy.org/api/package/cran/assertive.properties/badge.svg)](http://depsy.org/package/r/assertive.properties)
 
 # assertive.properties
 
